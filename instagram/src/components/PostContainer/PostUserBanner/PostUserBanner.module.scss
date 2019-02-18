@@ -1,0 +1,13 @@
+.PostUserBanner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid blue;
+
+	p {
+		margin: 1%;
+		//border: 1px solid green;
+	}
+}
