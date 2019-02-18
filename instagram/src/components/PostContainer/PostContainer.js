@@ -7,9 +7,13 @@ import PostComments from "./PostComments/PostComments";
 const PostContainer = props => {
   return (
     <div className={styles.PostContainer}>
-      <PostUserBanner />
-      <img src="#" alt="test" />
-      <PostComments />
+      {props.dData.map((dUsr, index) => (
+        <React.Fragment key={index}>
+          <PostUserBanner dUsr={dUsr} />
+          <PostComments dUsr={dUsr} />
+        </React.Fragment>
+      ))}
+      ;
     </div>
   );
 };

@@ -7,6 +7,7 @@ const PostComments = props => {
     <div className={styles.PostComments}>
       <p> likes comments icons</p>
       <p>timestamp</p>
+      <p>{props.comments}</p>
       <input type="text" placeholder="Add a Comment..." />
     </div>
   );

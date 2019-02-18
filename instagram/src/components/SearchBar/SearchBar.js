@@ -3,12 +3,15 @@ import React from "react";
 import styles from "./SearchBar.module.scss";
 import SearchBarLogo from "./SearchBarLogo/SearchBarLogo";
 import SearchBarIcons from "./SearchBarIcons/SearchBarIcons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const SearchBar = props => {
   return (
     <div className={styles.SearchBar}>
       <SearchBarLogo />
-      <input type="text" placeholder='{<span>icon</span>"Search"}' />
+      <FontAwesomeIcon icon={faSearch} />
+      <input type="text" placeholder={<FontAwesomeIcon icon={faSearch} />} />
       <SearchBarIcons />
     </div>
   );
