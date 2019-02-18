@@ -7,7 +7,12 @@ const PostComments = props => {
     <div className={styles.PostComments}>
       <p> likes comments icons</p>
       <p>timestamp</p>
-      <p>{props.comments}</p>
+      {props.dUsr.comments.map((com, index) => (
+        <React.Fragment key={index}>
+          <p>{com.text}</p>
+        </React.Fragment>
+      ))}
+      <p>{props.dUsr.timestamp}</p>
       <input type="text" placeholder="Add a Comment..." />
     </div>
   );

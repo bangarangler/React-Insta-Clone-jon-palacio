@@ -11,7 +11,7 @@ const SearchBar = props => {
     <div className={styles.SearchBar}>
       <SearchBarLogo />
       <FontAwesomeIcon icon={faSearch} />
-      <input type="text" placeholder={<FontAwesomeIcon icon={faSearch} />} />
+      <input type="text" placeholder="Search" />
       <SearchBarIcons />
     </div>
   );
