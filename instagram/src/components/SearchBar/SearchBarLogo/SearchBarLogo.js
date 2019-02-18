@@ -7,10 +7,10 @@ import styles from "./SearchBarLogo.module.scss";
 
 const SearchBarLogo = props => {
   return (
-    <React.Fragment>
+    <div className={styles.SearchBarLogo}>
       <FontAwesomeIcon icon={faInstagram} />
       <p>Instagram</p>
-    </React.Fragment>
+    </div>
   );
 };
 

@@ -6,11 +6,11 @@ import styles from "./SearchBarIcons.module.scss";
 
 const SearchBarIcons = props => {
   return (
-    <React.Fragment>
+    <div className={styles.SearchBarIcons}>
       <FontAwesomeIcon icon={faCompass} />
       <FontAwesomeIcon icon={faHeart} />
       <FontAwesomeIcon icon={faUser} />
-    </React.Fragment>
+    </div>
   );
 };
 
