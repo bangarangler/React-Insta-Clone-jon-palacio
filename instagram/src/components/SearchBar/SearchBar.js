@@ -6,7 +6,7 @@ import SearchBarIcons from "./SearchBarIcons/SearchBarIcons";
 
 const SearchBar = props => {
   return (
-    <div>
+    <div className={styles.SearchBar}>
       <SearchBarLogo />
       <input type="text" placeholder='{<span>icon</span>"Search"}' />
       <SearchBarIcons />
