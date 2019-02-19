@@ -10,7 +10,7 @@ const PostContainer = props => {
       {props.dData.map((dUsr, index) => (
         <React.Fragment key={index}>
           <PostUserBanner dUsr={dUsr} />
-          <img src={dUsr.imageUrl} alt="post" />
+          <img className={styles.PostImg} src={dUsr.imageUrl} alt="post" />
           <PostComments dUsr={dUsr} />
         </React.Fragment>
       ))}
