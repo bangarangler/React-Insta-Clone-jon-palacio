@@ -3,9 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  border: 1px solid red;
+  //border: 1px solid red;
   width: 90%;
-  margin: 0 auto;
+  margin: 2% auto;
+
+	form {
+		width: 100%;
+		//border: 1px solid red;
+	}
 
 	input {
 		width: 100%;
