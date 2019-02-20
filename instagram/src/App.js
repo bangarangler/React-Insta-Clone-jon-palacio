@@ -7,6 +7,8 @@ import PostsPage from "./components/PostContainer/PostsPage";
 //import SearchBar from "./components/SearchBar/SearchBar";
 //import PostContainer from "./components/PostContainer/PostContainer";
 
+//const LoadPage = withAuthinticate(App);
+
 class App extends Component {
   constructor() {
     super();
@@ -51,7 +53,6 @@ class App extends Component {
     return (
       <div className="App">
         <PostsPage
-          handleChange={this.handleChange}
           dData={this.state.userData}
           handleComment={this.handleComment}
         />

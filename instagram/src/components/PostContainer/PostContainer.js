@@ -14,7 +14,7 @@ const PostContainer = props => {
             <img className={styles.PostImg} src={dUsr.imageUrl} alt="post" />
             <PostComments
               index={index}
-              handleChange={props.handleChange}
+              //handleChange={props.handleChange}
               dUsr={dUsr}
               handleComment={props.handleComment}
             />

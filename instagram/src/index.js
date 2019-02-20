@@ -4,7 +4,13 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import withAuthinticate from "./components/authentication/withAuthinticate.js";
+
+import Login from "./components/Login/Login.js";
+
+const LoadPage = withAuthinticate(App)(Login);
+
+ReactDOM.render(<LoadPage />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

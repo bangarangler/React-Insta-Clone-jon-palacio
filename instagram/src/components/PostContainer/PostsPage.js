@@ -7,7 +7,7 @@ const PostsPage = props => {
     <React.Fragment>
       <SearchBar />
       <PostContainer
-        handleChange={props.handleChange}
+        //handleChange={props.handleChange}
         dData={props.dData}
         handleComment={props.handleComment}
       />
