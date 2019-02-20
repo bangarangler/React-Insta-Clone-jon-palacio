@@ -53,6 +53,7 @@ class App extends Component {
     return (
       <div className="App">
         <PostsPage
+          //handleChange={this.handleChange}
           dData={this.state.userData}
           handleComment={this.handleComment}
         />

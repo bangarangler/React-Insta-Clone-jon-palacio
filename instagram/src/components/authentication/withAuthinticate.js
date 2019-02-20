@@ -9,10 +9,13 @@ const withAuthinticate = App => Login => {
       };
     }
     render() {
-      if (localStorage.getItem("username")) {
+      if (
+        localStorage.getItem("username") &&
+        localStorage.getItem("password")
+      ) {
         return <App />;
       } else {
-        return <Login name={"jon"} />;
+        return <Login />;
       }
     }
   };
