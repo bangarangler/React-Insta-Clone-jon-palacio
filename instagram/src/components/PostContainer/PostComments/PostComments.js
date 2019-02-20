@@ -4,10 +4,11 @@ import { faHeart, faComment } from "@fortawesome/free-solid-svg-icons";
 import styles from "./PostComments.module.scss";
 
 class PostComments extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      commentText: ""
+      commentText: "",
+      likes: props.dUsr.likes
     };
   }
 
@@ -20,11 +21,20 @@ class PostComments extends React.Component {
   handleChange = event => {
     this.setState({ commentText: event.target.value });
   };
+
+  handleLike = e => {
+    this.setState(prevState => ({ likes: prevState.likes + 1 }));
+    //this.setState({
+    //likes: this.state.likes + 1
+    //})
+  };
   render() {
+    console.log(this.props.dUsr.likes);
     return (
       <div className={styles.PostComments}>
         <div className={styles.CommentIcons}>
-          <FontAwesomeIcon icon={faHeart} />
+          <FontAwesomeIcon onClick={this.handleLike} icon={faHeart} />
+          {this.state.likes}
           <FontAwesomeIcon icon={faComment} />
         </div>
         {this.props.dUsr.comments.map((com, index) => (

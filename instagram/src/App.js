@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import "./App.scss";
 import dummyData from "./dummy-data";
 import PropTypes from "prop-types";
+import PostsPage from "./components/PostContainer/PostsPage";
 
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
+//import SearchBar from "./components/SearchBar/SearchBar";
+//import PostContainer from "./components/PostContainer/PostContainer";
 
 class App extends Component {
   constructor() {
@@ -49,8 +50,7 @@ class App extends Component {
     console.log(this.state.userData);
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer
+        <PostsPage
           handleChange={this.handleChange}
           dData={this.state.userData}
           handleComment={this.handleComment}
