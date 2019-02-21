@@ -14,7 +14,9 @@ class App extends Component {
     super();
     //this.state = { dummyData, commentText: "" };
     this.state = {
-      userData: []
+      userData: [],
+      filteredData: [],
+      searchText: ""
     };
   }
 
@@ -48,25 +50,37 @@ class App extends Component {
     resetString();
   };
 
-  //function to filter search
-  filterSearch = () => {
-    let users = [];
-    this.state.userData.filter(usnm => users.push(usnm.username));
-    console.log(users);
-    let comments = [];
-    this.state.userData.filter(p => comments.push(p.comments));
-    console.log(comments);
+  searchChange = e => {
+    e.preventDefault();
+    this.setState({ searchText: e.target.value });
   };
 
+  //function to filter search
+  //filterSearch = e => {
+  //e.preventDefault();
+  //const usnm = this.state.userData.filter(user =>
+  //user.username.includes(e.target.value)
+  //);
+  ////this.setState({ filteredData: usnm });
+  //console.log(usnm);
+  //};
+
   render() {
-    console.log(this.state.userData);
+    //console.log(this.state.userData);
     return (
       <div className="App">
         <PostsPage
           //handleChange={this.handleChange}
-          dData={this.state.userData}
+          dData={
+            this.state.searchText !== ""
+              ? this.state.userData.filter(usr =>
+                  usr.username.includes(this.state.searchText)
+                )
+              : this.state.userData
+          }
           handleComment={this.handleComment}
-          filter={() => this.filterSearch()}
+          searchChange={this.searchChange}
+          searchText={this.state.searchText}
         />
       </div>
     );

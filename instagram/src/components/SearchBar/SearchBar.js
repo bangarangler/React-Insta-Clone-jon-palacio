@@ -7,37 +7,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 class SearchBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchText: ""
-    };
-  }
+  //constructor(props) {
+  //super(props);
+  //this.state = {
+  //searchText: ""
+  //};
+  //}
 
-  searchChange = e => {
-    e.preventDefault();
-    this.setState({ [e.target.name]: e.target.value });
-  };
-
-  handleSubmit = e => {
-    e.preventDefault();
-    this.props.filter();
-  };
+  //handleSubmit = e => {
+  //e.preventDefault();
+  //this.props.filter();
+  //};
 
   render() {
     return (
       <div className={styles.SearchBar}>
         <SearchBarLogo />
         <FontAwesomeIcon icon={faSearch} />
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            placeholder="Search"
-            name="searchText"
-            value={this.state.searchText}
-            onChange={this.searchChange}
-          />
-        </form>
+        <input
+          type="text"
+          placeholder="Search"
+          name="searchText"
+          value={this.props.searchText}
+          onChange={this.props.searchChange}
+        />
         <SearchBarIcons />
       </div>
     );
