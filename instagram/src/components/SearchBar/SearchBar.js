@@ -1,10 +1,19 @@
 import React from "react";
 
-import styles from "./SearchBar.module.scss";
+//import styles from "./SearchBar.module.scss";
+import styled from "styled-components";
 import SearchBarLogo from "./SearchBarLogo/SearchBarLogo";
 import SearchBarIcons from "./SearchBarIcons/SearchBarIcons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
+const SearchBarDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+`;
 
 class SearchBar extends React.Component {
   //constructor(props) {
@@ -21,7 +30,8 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className={styles.SearchBar}>
+      //<div className={styles.SearchBar}>
+      <SearchBarDiv>
         <SearchBarLogo />
         <FontAwesomeIcon icon={faSearch} />
         <input
@@ -32,7 +42,7 @@ class SearchBar extends React.Component {
           onChange={this.props.searchChange}
         />
         <SearchBarIcons />
-      </div>
+      </SearchBarDiv>
     );
   }
 }
