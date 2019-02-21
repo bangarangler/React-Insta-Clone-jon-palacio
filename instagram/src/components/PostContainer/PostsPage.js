@@ -5,7 +5,7 @@ import PostContainer from "./PostContainer";
 const PostsPage = props => {
   return (
     <React.Fragment>
-      <SearchBar />
+      <SearchBar dData={props.dData} filter={props.filter} />
       <PostContainer
         //handleChange={props.handleChange}
         dData={props.dData}

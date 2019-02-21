@@ -48,6 +48,16 @@ class App extends Component {
     resetString();
   };
 
+  //function to filter search
+  filterSearch = () => {
+    let users = [];
+    this.state.userData.filter(usnm => users.push(usnm.username));
+    console.log(users);
+    let comments = [];
+    this.state.userData.filter(p => comments.push(p.comments));
+    console.log(comments);
+  };
+
   render() {
     console.log(this.state.userData);
     return (
@@ -56,6 +66,7 @@ class App extends Component {
           //handleChange={this.handleChange}
           dData={this.state.userData}
           handleComment={this.handleComment}
+          filter={() => this.filterSearch()}
         />
       </div>
     );
