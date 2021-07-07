@@ -1,0 +1,36 @@
+.PostComments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  //border: 1px solid red;
+  width: 90%;
+  margin: 2% auto;
+
+	form {
+		width: 100%;
+		//border: 1px solid red;
+	}
+
+	input {
+		width: 100%;
+		font-size: 1.6rem;
+	}
+}
+
+.text {
+	//border: 1px solid red;
+	margin: 1% 0 1%;
+	padding: 1%;
+}
+
+
+.CommentIcons {
+	//border: 1px solid red;
+	font-size: 1.6rem;
+	width: 25%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}

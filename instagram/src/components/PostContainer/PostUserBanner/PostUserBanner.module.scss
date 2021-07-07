@@ -1,0 +1,25 @@
+.PostUserBanner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+	width: 90%;
+	margin: 2% auto;
+	//border: 1px solid blue;
+	padding: 1%;
+	box-sizing: border-box;
+
+	p {
+		margin: 1%;
+		//border: 1px solid green;
+	}
+}
+
+.userImg {
+	border-radius: 50%;
+	height: 10%;
+	width: 10%;
+}
+
+.usrName {
+	margin-left: 3%;
+}

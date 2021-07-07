@@ -1,0 +1,13 @@
+.SearchBarLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	margin: 0 3%;
+	font-size: 1.6rem;
+
+	p {
+		margin-left: 5%;
+		border-left: 3px solid hotpink;
+		padding: 5%;
+	}
+}
